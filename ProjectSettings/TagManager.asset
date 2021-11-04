@@ -9,6 +9,7 @@ TagManager:
   - Key
   - Guard
   - Trap
+  - Bullet
   layers:
   - Default
   - TransparentFX

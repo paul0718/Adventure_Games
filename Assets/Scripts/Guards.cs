@@ -10,12 +10,16 @@ public class Guards : MonoBehaviour
 
     NavMeshAgent Guard_NavMeshAgent;
     GameObject player;
+    Player playerScript;
 
-
+    // health management
+    public HealthBar healthBar;
     void Start()
-    {
+    {   
+        // Tracking the player using navmesh
         Guard_NavMeshAgent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
+        playerScript = player.GetComponent<Player>();
         StartCoroutine(LookForPlayer());
     }
 
@@ -27,8 +31,16 @@ public class Guards : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision other){
-        if (other.gameObject.CompareTag("Bullet")){
+    private void OnTriggerEnter(Collider other){
+        if (other.CompareTag("Player")){
+
+            // Deal damage, update health bar
+            playerScript.ChangeHealth(-25);
+            playerScript.StartCoroutine("BeInvulnerable");
+            healthBar.UpdateHealthBar();
+
+        }
+        else if (other.gameObject.CompareTag("Bullet")){
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

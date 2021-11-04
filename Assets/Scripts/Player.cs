@@ -5,17 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     
-    // // Start is called before the first frame update
-    // void Start()
-    // {
-        
-    // }
-
-    // // Update is called once per frame
-    // void Update()
-    // {
-        
-    // }
+    //UI and health
+    bool canChangeHealth = true;
+    public float health = 100;
+    public float maxHealth = 100;
 
     void OnTriggerEnter(Collider other){
         //print(other.gameObject.name);
@@ -33,5 +26,17 @@ public class Player : MonoBehaviour
             //Restart() or TakeDamage()
             //Guards.Stun(2f)
         }
+    }
+
+    public void ChangeHealth(int value) {
+        if (canChangeHealth) {
+            health += value;
+        }
+    }
+
+    IEnumerator BeInvulnerable(){
+        canChangeHealth = false;
+        yield return new WaitForSeconds(1f);
+        canChangeHealth = true;
     }
 }

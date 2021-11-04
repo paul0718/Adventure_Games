@@ -20,7 +20,7 @@ public class Click_Move : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0)){
             RaycastHit hit;
-            if (Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 200)){
+            if (Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 500)){
                 _navMeshAgent.destination = hit.point;
             }
         }
