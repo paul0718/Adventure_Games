@@ -9,7 +9,8 @@ public class Player : MonoBehaviour
     bool canChangeHealth = true;
     public float health = 100;
     public float maxHealth = 100;
-
+    public HealthBar healthBar;
+    
     void OnTriggerEnter(Collider other){
         //print(other.gameObject.name);
         if (other.gameObject.CompareTag("Key")){
@@ -20,20 +21,22 @@ public class Player : MonoBehaviour
             PublicVars.Keys[keynum] = true;
         }
         else if (other.gameObject.CompareTag("Trap")){
-            //LoadScene"Wasted"
+            ChangeHealth(-25);
+            StartCoroutine("BeInvulnerable");
+            healthBar.UpdateHealthBar();
         }
         else if (other.gameObject.CompareTag("Guard")){
             //Restart() or TakeDamage()
             //Guards.Stun(2f)
         }
     }
-
     public void ChangeHealth(int value) {
         if (canChangeHealth) {
             health += value;
         }
     }
 
+    
     IEnumerator BeInvulnerable(){
         canChangeHealth = false;
         yield return new WaitForSeconds(1f);
