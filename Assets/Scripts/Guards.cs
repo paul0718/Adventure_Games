@@ -24,6 +24,7 @@ public class Guards : MonoBehaviour
     }
 
     IEnumerator LookForPlayer(){
+
         while(true){
             yield return new WaitForSeconds(0.5f);
             Guard_NavMeshAgent.destination = player.transform.position;
@@ -44,7 +45,8 @@ public class Guards : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
-        else if (other.gameObject.CompareTag("Trap")){
+
+        if (other.CompareTag("Trap")){
             Destroy(gameObject);
         }
     }
