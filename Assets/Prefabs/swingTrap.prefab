@@ -109,5 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ffcc9eda63d3bf46a89cdcdf92e5c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trapType: Swing
   isSwinging: 0
   rotDir: 0

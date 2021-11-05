@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Swing : MonoBehaviour
+public class Trap : MonoBehaviour
 { 
     
     //Determine what trap it is
@@ -10,6 +10,9 @@ public class Swing : MonoBehaviour
     //Swinging the swingtrap
     public bool isSwinging;
     public float rotDir;
+    
+    //Spiking the spiketrap
+    public bool isSpiking;
 
     // Speed of all traps
     float speed = 2f;
@@ -26,6 +29,10 @@ public class Swing : MonoBehaviour
         if (trapType == "Swing" && !isSwinging)
         {
             StartCoroutine("DoTheSwing");
+        }
+        if (trapType == "Spike" && !isSpiking)
+        {
+            StartCoroutine("DoTheSpike");
         }
     }
 
@@ -52,5 +59,17 @@ public class Swing : MonoBehaviour
         }
 
         isSwinging = false;
+    }
+
+    IEnumerator DoTheSpike()
+    {
+        isSpiking = true;
+        GetComponent<Renderer>().enabled = false;
+        GetComponent<Collider>().enabled = false;
+        yield return new WaitForSeconds(speed);
+        GetComponent<Renderer>().enabled = true;
+        GetComponent<Collider>().enabled = true;
+        yield return new WaitForSeconds(speed);
+        isSpiking = false;
     }
 }
