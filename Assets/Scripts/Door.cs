@@ -10,7 +10,7 @@ public class Door : MonoBehaviour
     public int total_keys;
 
     void Start()
-    {
+   {
         //doorNum = gameObject.name[4]; // DoorX, X is the number of the door
     }
 
