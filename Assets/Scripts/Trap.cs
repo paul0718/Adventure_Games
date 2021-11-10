@@ -7,16 +7,26 @@ public class Trap : MonoBehaviour
     
     //Determine what trap it is
     public string trapType;
-    //Swinging the swingtrap
+
+    //Swinging the swing trap
     public bool isSwinging;
     public float rotDir;
     
-    //Spiking the spiketrap
+    //Spiking the spike trap
     public bool isSpiking;
+
+    // Shooting the dart trap
+    public GameObject dart;
+    public bool isDarting;
 
     // Speed of all traps
     float speed = 2f;
     
+    // Sound for traps
+    public AudioClip spikeInSnd;
+    public AudioClip spikeOutSnd;
+    public AudioClip swingSnd;
+    public AudioClip dartSnd;
     void Start()
     {
         
@@ -34,14 +44,20 @@ public class Trap : MonoBehaviour
         {
             StartCoroutine("DoTheSpike");
         }
+        if (trapType == "Dart" && !isDarting)
+        {
+            StartCoroutine("DoTheDart");
+        }
     }
 
     // Rotates the trap back and forth using SmoothStep
     IEnumerator DoTheSwing()
     {
+        GetComponent<AudioSource>().PlayOneShot(swingSnd);
         float timeElapsed = 0;
 
         isSwinging = true;
+        
         while (timeElapsed < speed)
         {
             rotDir = Mathf.SmoothStep(-100, 100, timeElapsed / speed);
@@ -49,7 +65,9 @@ public class Trap : MonoBehaviour
             timeElapsed += Time.deltaTime;
             yield return null;
         }
+        GetComponent<AudioSource>().PlayOneShot(swingSnd);
         timeElapsed = 0;
+        
         while (timeElapsed < speed)
         {
             rotDir = Mathf.SmoothStep(100, -100, timeElapsed / speed);
@@ -66,10 +84,23 @@ public class Trap : MonoBehaviour
         isSpiking = true;
         GetComponent<Renderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
+        GetComponent<AudioSource>().PlayOneShot(spikeInSnd);
+
         yield return new WaitForSeconds(speed);
         GetComponent<Renderer>().enabled = true;
         GetComponent<Collider>().enabled = true;
+        GetComponent<AudioSource>().PlayOneShot(spikeOutSnd);
         yield return new WaitForSeconds(speed);
         isSpiking = false;
+    }
+
+    IEnumerator DoTheDart()
+    {
+        isDarting = true;
+        GetComponent<AudioSource>().PlayOneShot(dartSnd);
+        GameObject projectile = Instantiate(dart, transform.position, dart.transform.rotation) as GameObject;
+        projectile.GetComponent<Rigidbody>().AddForce(transform.up*500);
+        yield return new WaitForSeconds(speed);
+        isDarting = false;
     }
 }

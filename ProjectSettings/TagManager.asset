@@ -11,6 +11,8 @@ TagManager:
   - Trap
   - Bullet
   - HealthBar
+  - Poison
+  - Sleep
   layers:
   - Default
   - TransparentFX

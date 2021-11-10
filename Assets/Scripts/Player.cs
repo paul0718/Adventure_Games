@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.AI;
 public class Player : MonoBehaviour
 {
     
@@ -11,6 +12,25 @@ public class Player : MonoBehaviour
     public float maxHealth = 100;
     public HealthBar healthBar;
     
+    // Animation
+    bool actionState;
+
+    public float speed;
+    private void Start() {
+       
+    }
+    private void Update() {
+
+        speed = Mathf.Max(Mathf.Abs(GetComponent<NavMeshAgent>().velocity.x), Mathf.Abs(GetComponent<NavMeshAgent>().velocity.y));
+        transform.GetChild(0).GetComponent<Animator>().SetFloat("speed", speed);
+
+        // Check for death
+        if (health <= 0) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+
     void OnTriggerEnter(Collider other){
         //print(other.gameObject.name);
         if (other.gameObject.CompareTag("Key")){
