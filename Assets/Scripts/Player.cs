@@ -12,15 +12,15 @@ public class Player : MonoBehaviour
     public float maxHealth = 100;
     public HealthBar healthBar;
     
-    // Animation
-    bool actionState;
 
+// Animation
     public float speed;
     private void Start() {
        
     }
     private void Update() {
 
+        // Animation state transition
         speed = Mathf.Max(Mathf.Abs(GetComponent<NavMeshAgent>().velocity.x), Mathf.Abs(GetComponent<NavMeshAgent>().velocity.y));
         transform.GetChild(0).GetComponent<Animator>().SetFloat("speed", speed);
 

@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour
     public Vector3 offset;
     void Start()
     {
-        offset = transform.position - toFollow.transform.position;
+        offset = new Vector3(0,29.4839249f,-8.97572613f);
     }
 
     // Update is called once per frame
