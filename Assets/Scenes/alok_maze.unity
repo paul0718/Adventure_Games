@@ -2089,6 +2089,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 8917305553312470439, guid: 5c9a31804900b4942afce00e8a0335e3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ab48db662436c479eaf4dc8463af572d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c9a31804900b4942afce00e8a0335e3, type: 3}
 --- !u!4 &533298281 stripped
@@ -8845,6 +8849,14 @@ PrefabInstance:
     - target: {fileID: 5333926831909208185, guid: 9de24651288599f4d81d97711514afba, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820386945351156972, guid: 9de24651288599f4d81d97711514afba, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820386945351156972, guid: 9de24651288599f4d81d97711514afba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.43
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9de24651288599f4d81d97711514afba, type: 3}
