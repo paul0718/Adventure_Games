@@ -19,7 +19,7 @@ GameObject:
   m_TagString: Fixed_Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &293959060175328686
 Transform:
@@ -116,6 +116,7 @@ MonoBehaviour:
   isSpiking: 0
   dart: {fileID: 0}
   isDarting: 0
+  speed: 2
   spikeInSnd: {fileID: 8300000, guid: dc32e1828c186a44b86c5d145f09950f, type: 3}
   spikeOutSnd: {fileID: 8300000, guid: 7919dbc5a6752334fa753a79969c28c5, type: 3}
   swingSnd: {fileID: 8300000, guid: 97a10beff99b1b44b8f98dfa9e8c8ec6, type: 3}
@@ -131,7 +132,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7919dbc5a6752334fa753a79969c28c5, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -309,6 +310,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7091fc228d875a543b7b8aabdca778cd, type: 3}
       propertyPath: m_Name
       value: spikeTrapBase
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7091fc228d875a543b7b8aabdca778cd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7091fc228d875a543b7b8aabdca778cd, type: 3}
