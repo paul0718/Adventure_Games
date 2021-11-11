@@ -20,7 +20,7 @@ public class Trap_Art : MonoBehaviour
     public bool isDarting;
 
     // Speed of all traps
-    float speed = 2f;
+    public float speed = 2f;
     
     // Sound for traps
     public AudioClip spikeInSnd;

@@ -103,8 +103,9 @@ public class Player : MonoBehaviour
     IEnumerator Poisoned(){
         if (!immune){
             StartCoroutine("BeImmune");
+            healthBar.StartCoroutine("Poisoned");
             _navMeshAgent.speed *= 0.2f;
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(4f);
             _navMeshAgent.speed *= 5f;
         }
     }
