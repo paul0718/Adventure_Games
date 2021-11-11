@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5238967881721172953}
   m_Layer: 0
   m_Name: swingTrap
-  m_TagString: Trap
+  m_TagString: Fixed_Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5238967881721172952}
-  m_LocalRotation: {x: -1, y: -0, z: -0, w: 0}
+  m_LocalRotation: {x: -1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0.42164582, z: 0.03141002}
   m_LocalScale: {x: 0.6938112, y: 16.191193, z: 9.0914545}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
 --- !u!33 &5238967881721172949
 MeshFilter:
   m_ObjectHideFlags: 0

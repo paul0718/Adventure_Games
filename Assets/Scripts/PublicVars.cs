@@ -3,4 +3,5 @@ public static class PublicVars{
     public static bool[] Keys = new bool[total_keys];
     // public static bool[] Pedals = new bool[2];
     public static bool paused = false;
+
 }

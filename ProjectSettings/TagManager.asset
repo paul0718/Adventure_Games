@@ -8,11 +8,11 @@ TagManager:
   - Door
   - Key
   - Guard
-  - Trap
-  - Bullet
   - HealthBar
   - Poison
   - Sleep
+  - Fixed_Trap
+  - Wall
   layers:
   - Default
   - TransparentFX

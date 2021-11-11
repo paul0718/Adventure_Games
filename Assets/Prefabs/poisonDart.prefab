@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4721336458722119161}
   - component: {fileID: 4721336458722119160}
   - component: {fileID: 4721336458722119165}
+  - component: {fileID: 7428938750439912399}
   m_Layer: 0
   m_Name: poisonDart
   m_TagString: Poison
@@ -125,3 +126,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5074965ff6e66f9448ad3d3af57c48c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7428938750439912399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5567829780113593284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d46038c837cefc4b96a3f73b35da455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life_seconds: 4
