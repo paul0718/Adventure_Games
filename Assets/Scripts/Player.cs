@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 public class Player : MonoBehaviour
 {
-    
+
+    // Sounds
+    public AudioClip poisonSnd;
+    public AudioClip hurtSnd;
+    public AudioClip sleepSnd;
     //UI and health
     public float health = 100;
     public float maxHealth = 100;
@@ -72,6 +76,7 @@ public class Player : MonoBehaviour
     }
     public void ChangeHealth(int value) {
         if (vulnerable) {
+            GetComponent<AudioSource>().PlayOneShot(hurtSnd);
             health += value;
         }
     }
@@ -91,6 +96,7 @@ public class Player : MonoBehaviour
 
     IEnumerator Sleeping(){
         if (!immune){
+            GetComponent<AudioSource>().PlayOneShot(sleepSnd);
             StartCoroutine("BeImmune");
             _navMeshAgent.isStopped = true;
             can_move = false;
@@ -102,6 +108,7 @@ public class Player : MonoBehaviour
 
     IEnumerator Poisoned(){
         if (!immune){
+            GetComponent<AudioSource>().PlayOneShot(poisonSnd);
             StartCoroutine("BeImmune");
             healthBar.StartCoroutine("Poisoned");
             _navMeshAgent.speed *= 0.2f;
