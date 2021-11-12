@@ -11201,7 +11201,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8431930932212590312, guid: 46c81e7aad1d15248982aac4de8ebe72, type: 3}
   m_PrefabInstance: {fileID: 967519260}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/markLvl1.unity
 --- !u!1001 &1707054645
+=======
+--- !u!1001 &951057638
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3778508449389400056, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+      propertyPath: nextlvl_name
+      value: You_Won
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778508449389400057, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+      propertyPath: m_Name
+      value: Lvl_Loader
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778508449389400060, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778508449389400060, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778508449389400060, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778508449389400060, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -49.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778508449389400060, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778508449389400060, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778508449389400060, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778508449389400060, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778508449389400060, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778508449389400060, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778508449389400060, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
+--- !u!1001 &953819955
+>>>>>>> e5792b27ec89f5d67652dfb45b3d5d8b365db7dc:Assets/Scenes/MazeLevel/markLvl1.unity
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11370,9 +11435,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 32.490326
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/markLvl1.unity
     - target: {fileID: 8991944562122140779, guid: d744b9bab58ec274d82d99031394388a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.45607567
+=======
+    - target: {fileID: 47688284232629121, guid: 2f773684a5ee63741b21980aa3cec464, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+>>>>>>> e5792b27ec89f5d67652dfb45b3d5d8b365db7dc:Assets/Scenes/MazeLevel/markLvl1.unity
       objectReference: {fileID: 0}
     - target: {fileID: 8991944562122140779, guid: d744b9bab58ec274d82d99031394388a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13019,8 +13090,49 @@ PrefabInstance:
       value: Candle_01 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD:Assets/Scenes/markLvl1.unity
   m_SourcePrefab: {fileID: 100100000, guid: d744b9bab58ec274d82d99031394388a, type: 3}
 --- !u!1001 &1997807229
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 34e9e1a0f6446884f9710a255baf199f, type: 3}
+--- !u!1 &1580437728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580437729}
+  m_Layer: 0
+  m_Name: Scene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1580437729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580437728}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.7929811, y: -6.5439243, z: -10.314275}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 316213772}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1595578202 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 293959060175328686, guid: 106534bfe599fa64d8ec0b58d37874c5, type: 3}
+  m_PrefabInstance: {fileID: 932794301}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1643747683
+>>>>>>> e5792b27ec89f5d67652dfb45b3d5d8b365db7dc:Assets/Scenes/MazeLevel/markLvl1.unity
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2

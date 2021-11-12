@@ -14,7 +14,11 @@ GameObject:
   - component: {fileID: 2535504575260277440}
   - component: {fileID: 2535504575260277443}
   - component: {fileID: 773859917500320496}
+<<<<<<< HEAD
   - component: {fileID: 7323221585769865182}
+=======
+  - component: {fileID: -1985976025931492373}
+>>>>>>> e5792b27ec89f5d67652dfb45b3d5d8b365db7dc
   m_Layer: 0
   m_Name: GuardPatrol
   m_TagString: Guard
@@ -136,7 +140,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
+<<<<<<< HEAD
 --- !u!54 &7323221585769865182
+=======
+--- !u!54 &-1985976025931492373
+>>>>>>> e5792b27ec89f5d67652dfb45b3d5d8b365db7dc
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
