@@ -81,6 +81,7 @@ public class Trap_Art : MonoBehaviour
 
     IEnumerator DoTheSpike()
     {
+        
         isSpiking = true;
         GetComponent<Renderer>().enabled = false;
         GetComponent<Collider>().enabled = false;

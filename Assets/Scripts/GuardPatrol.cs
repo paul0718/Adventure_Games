@@ -50,7 +50,7 @@ public class GuardPatrol : MonoBehaviour
 
     void Update()
     {
-        if (Mathf.Abs(Vector3.Distance(transform.position, player.transform.position)) < 50 && !isLooking)
+        if (Mathf.Abs(Vector3.Distance(transform.position, player.transform.position)) < 30 && !isLooking)
         {
             guard_navMeshAgent.isStopped = false;
             StartCoroutine(LookForPlayer());
@@ -60,7 +60,7 @@ public class GuardPatrol : MonoBehaviour
 
     IEnumerator LookForPlayer(){
         isLooking = true;
-        while(Mathf.Abs(Vector3.Distance(transform.position, player.transform.position)) < 50){
+        while(Mathf.Abs(Vector3.Distance(transform.position, player.transform.position)) < 30){
             if (can_move){
                 yield return new WaitForSeconds(0.5f);
                 guard_navMeshAgent.destination = player.transform.position;

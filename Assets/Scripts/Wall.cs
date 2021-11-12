@@ -11,7 +11,7 @@ public class Wall : MonoBehaviour
         Renderer _renderer = GetComponent<Renderer>();
         Color oldColor = _renderer.material.color;
         Color newColor = oldColor;
-        newColor.a = 0.3f;
+        newColor.a = 0.1f;
         if (player.transform.position.z > transform.position.z)
         {
             _renderer.material.color = newColor;

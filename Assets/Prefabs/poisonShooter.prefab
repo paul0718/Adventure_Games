@@ -95,7 +95,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7919dbc5a6752334fa753a79969c28c5, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -225,6 +225,7 @@ MonoBehaviour:
   isSpiking: 0
   dart: {fileID: 5567829780113593284, guid: 2ac477cb144273e40bf3ebf80aa069ca, type: 3}
   isDarting: 0
+  speed: 2
   spikeInSnd: {fileID: 8300000, guid: dc32e1828c186a44b86c5d145f09950f, type: 3}
   spikeOutSnd: {fileID: 8300000, guid: 7919dbc5a6752334fa753a79969c28c5, type: 3}
   swingSnd: {fileID: 8300000, guid: 97a10beff99b1b44b8f98dfa9e8c8ec6, type: 3}
