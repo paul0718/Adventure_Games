@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 
 
-public class Guards : MonoBehaviour
+public class GuardPatrol : MonoBehaviour
 {
     NavMeshAgent guard_navMeshAgent;
     GameObject player;
@@ -16,6 +16,7 @@ public class Guards : MonoBehaviour
     bool immune = false;
     bool can_move = true;
 
+    bool isLooking = false;
     // health management
     public HealthBar healthBar;
     void Start()
@@ -24,7 +25,8 @@ public class Guards : MonoBehaviour
         guard_navMeshAgent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerScript = player.GetComponent<Player>();
-        StartCoroutine(LookForPlayer());
+        
+        
     }
 
     private void OnTriggerEnter(Collider other){
@@ -48,17 +50,25 @@ public class Guards : MonoBehaviour
 
     void Update()
     {
-        
+        if (Mathf.Abs(Vector3.Distance(transform.position, player.transform.position)) < 50 && !isLooking)
+        {
+            guard_navMeshAgent.isStopped = false;
+            StartCoroutine(LookForPlayer());
+        }
     }
 
 
     IEnumerator LookForPlayer(){
-        while(true){
+        isLooking = true;
+        while(Mathf.Abs(Vector3.Distance(transform.position, player.transform.position)) < 50){
             if (can_move){
                 yield return new WaitForSeconds(0.5f);
                 guard_navMeshAgent.destination = player.transform.position;
+                
             }
         }
+        guard_navMeshAgent.isStopped = true;
+        isLooking = false;
     }
 
     IEnumerator BeInvulnerable(){
