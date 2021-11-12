@@ -279,6 +279,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3284136301995857985, guid: 744fa5edffcd55a4cbe8c9b275b7b973, type: 3}
+      propertyPath: Lvl_to_Load
+      value: vijay_maze1 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3284136302459344499, guid: 744fa5edffcd55a4cbe8c9b275b7b973, type: 3}
       propertyPath: m_Name
       value: Canvas

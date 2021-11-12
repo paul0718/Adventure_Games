@@ -11324,7 +11324,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3778508449389400056, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
       propertyPath: nextlvl_name
-      value: vijay_maze1 1
+      value: markLvl1
       objectReference: {fileID: 0}
     - target: {fileID: 3778508449389400057, guid: ce54f70029809c04294f85ccaed1e297, type: 3}
       propertyPath: m_Name

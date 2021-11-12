@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 4de986119bbcc4e4db40fabf8fc4fb52
   - enabled: 1
-    path: Assets/Scenes/MazeLevel/alok_maze.unity
-    guid: 475e1e4d2282649c6b045a71f355f2fd
-  - enabled: 1
     path: Assets/Scenes/MazeLevel/vijay_maze1 1.unity
     guid: 618a327323a364919b75441f0614edac
+  - enabled: 1
+    path: Assets/Scenes/MazeLevel/alok_maze.unity
+    guid: 475e1e4d2282649c6b045a71f355f2fd
   - enabled: 1
     path: Assets/Scenes/MazeLevel/markLvl1.unity
     guid: 637da2ad15488a440b24dbc1d14dc357
